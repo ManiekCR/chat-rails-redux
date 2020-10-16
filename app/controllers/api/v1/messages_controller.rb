@@ -10,10 +10,10 @@ class Api::V1::MessagesController < ApplicationController
     message.user = current_user
     message.save
     render :json => {
-      :id => message.id,
-      :content => message.content,
-      :created_at => message.created_at,
-      :author => message.user.username
+      id: message.id,
+      content: message.content,
+      created_at: message.created_at,
+      author: message.user.username
     }
   end
 
