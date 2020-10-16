@@ -6,22 +6,23 @@ export function fetchMessages(channel) {
   const url = `/api/v1/channels/${channel}/messages`;
   const promise = fetch(url, { credentials: "same-origin" })
     .then(r => r.json());
-
   return {
     type: FETCH_MESSAGES,
     payload: promise // Will be resolved by redux-promise
   };
 }
 
-export function createMessage(channel, author, content) {
+export function createMessage(channel, content) {
+  const csrfToken = document.querySelector('meta[name="csrf-token"]').attributes.content.value;
   const url = `/api/v1/channels/${channel}/messages`;
-  const body = { author, content }; // ES6 destructuring
+  const body = { content }; // ES6 destructuring
   const promise = fetch(url, {
     credentials: 'same-origin',
     method: 'POST',
     headers: {
       Accept: 'application/json',
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      'X-CSRF-Token': csrfToken
     },
     body: JSON.stringify(body)
   }).then(r => r.json());
@@ -32,9 +33,8 @@ export function createMessage(channel, author, content) {
   };
 }
 
-export function selectChannel(channel) {
+export function selectChannel() {
   return {
-    type: CHANNEL_SELECTED,
-    payload: channel
+    type: CHANNEL_SELECTED
   };
 }

@@ -6,7 +6,7 @@ const App = (props) => {
   return (
     <div className="messaging-wrapper">
       <div className="logo-container">
-        <img className="messaging-logo" src="assets/images/logo.svg" alt="logo" />
+        <img className="messaging-logo" src="https://www.flaticon.com/svg/static/icons/svg/1005/1005513.svg" alt="logo" />
       </div>
       <ChannelList selectedChannel={props.match.params.channel} />
       <MessageList selectedChannel={props.match.params.channel} />
