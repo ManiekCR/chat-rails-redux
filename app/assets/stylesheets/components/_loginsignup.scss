@@ -1,0 +1,63 @@
+.threshold-container {
+  padding-top: 10vh;
+  display: flex;
+  justify-content: center;
+
+  .login-form {
+    margin: 5vh 10vw*2 0 10vw*2;
+    border: solid 2px black;
+    padding: 40px 40px;
+    min-width: 350px;
+  }
+  .form-actions {
+    display:flex;
+    flex-direction: row-reverse;
+  }
+  .form-actions input {
+    border:solid 1px white;
+    width:100%;
+    margin-bottom: 10px;
+  }
+  .shared-links {
+    display: flex;
+    flex-direction:column;
+    padding: 0 0;
+    top:0;
+  }
+}
+
+.signup-form {
+    margin: 0 10vw*2 0 10vw*2;
+    border: solid 2px black;
+    padding: 40px 40px;
+  }
+
+.shared-links a {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  // .shared-links {
+  //   position:relative;
+
+  // }
+
+  // #sign-up {
+  //   bottom: -80px;
+  //   color: gray;
+  // }
+
+  // #forgot {
+  //   right:0;
+  //   font-size:15px;
+  //   color: gray;
+  // }
+
+  // #login {
+  //   color: gray;
+  //   font-size:20px;
+  //       bottom: -23px;
+
+  //   width:fit-content;
+  //   right:0;
+  // }
