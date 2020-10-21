@@ -144,6 +144,16 @@ button {
 }
 
 @media (max-width: 575px) {
+  .logo-container {
+    justify-content: flex-start;
+    padding: 0 20px;
+    height: 10%;
+  }
+
+  .channels-container {
+    height: 15%;
+  }
+
   .channels-container > div > ul > li {
     display: inline;
     padding: 10px;
@@ -153,13 +163,9 @@ button {
     padding-top: 10px;
   }
 
-  .logo-container {
-    padding-bottom: 4px;
-    margin-top: -19px;
-  }
-
   .channel-container {
-    height: 80%;
+    height: 75%;
+    margin-top: -40px;
   }
 
   .channel-editor {
