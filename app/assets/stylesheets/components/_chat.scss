@@ -144,6 +144,11 @@ button {
 }
 
 @media (max-width: 575px) {
+  .messaging-wrapper {
+    display: flex;
+    height: 95vh;
+  }
+
   .logo-container {
     justify-content: flex-start;
     padding: 0 20px;
@@ -171,5 +176,9 @@ button {
   .channel-editor {
     position: sticky;
     bottom: 0;
+  }
+
+  .channel-content {
+    overflow: scroll;
   }
 }
