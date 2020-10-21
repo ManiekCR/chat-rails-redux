@@ -4,13 +4,16 @@ import MessageList from '../containers/message_list';
 
 const App = (props) => {
   return (
-    <div className="messaging-wrapper">
-      <div className="logo-container">
-        <img className="messaging-logo" src="https://www.flaticon.com/svg/static/icons/svg/1005/1005513.svg" alt="logo" />
+    <div className="container-fluid">
+      <div className="messaging-wrapper row">
+        <div className="logo-container col-12 col-sm-1 pt-4">
+          <img className="messaging-logo" src="https://www.flaticon.com/svg/static/icons/svg/1005/1005513.svg" alt="logo" />
+        </div>
+        <ChannelList selectedChannel={props.match.params.channel} />
+        <MessageList selectedChannel={props.match.params.channel} />
       </div>
-      <ChannelList selectedChannel={props.match.params.channel} />
-      <MessageList selectedChannel={props.match.params.channel} />
     </div>
+
   );
 };
 

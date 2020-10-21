@@ -19,10 +19,10 @@ li > a {
 
 .logo-container {
   padding: 10px;
-  width: 60px;
-  height: 100%;
   background: #dbdbdb;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
 }
 
 .messaging-logo {
@@ -33,18 +33,15 @@ li > a {
 /* Column 2/3 *****************************************************************/
 
 .channels-container {
-  padding: 20px;
-  width: 220px;
-  height: 100%;
   background: #f4f4f4;
   box-sizing: border-box;
 }
 
-.channels-container > span {
+.channels-container > div > span {
   font-weight: 900;
 }
 
-.channels-container > ul {
+.channels-container > div > ul {
   list-style: none;
   -webkit-margin-before: 2em;
   -webkit-margin-after: 0em;
@@ -53,14 +50,14 @@ li > a {
   -webkit-padding-start: 0px;
 }
 
-.channels-container > ul > li {
+.channels-container > div > ul > li {
   margin: 10px 0;
   font-size: 14px;
   color: #7c7c7c;
   cursor: pointer;
 }
 
-.channels-container > ul > li.active {
+.channels-container > div > ul > li.active {
   font-weight: 600;
   color: black
 }
@@ -70,17 +67,14 @@ li > a {
 .channel-container {
   display: flex;
   flex-direction: column;
-  width: calc(100% - 290px);
   border-left: 1px solid #DBDBDB;
+  height: 100%;
 }
 
 .channel-title {
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  padding-left: 28px;
-  height: 70px;
-  width: 100%;
   border-bottom: 1px solid #f4f4f4;
 }
 
@@ -147,4 +141,29 @@ button {
   color: white;
   font-size: 14px;
   font-weight: 600;
+}
+
+@media (max-width: 575px) {
+  .channels-container > div > ul > li {
+    display: inline;
+    padding: 10px;
+  }
+
+  .channels-container > div > ul  {
+    padding-top: 10px;
+  }
+
+  .logo-container {
+    padding-bottom: 4px;
+    margin-top: -19px;
+  }
+
+  .channel-container {
+    height: 80%;
+  }
+
+  .channel-editor {
+    position: sticky;
+    bottom: 0;
+  }
 }
