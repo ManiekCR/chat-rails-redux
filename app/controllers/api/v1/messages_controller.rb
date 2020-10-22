@@ -13,7 +13,8 @@ class Api::V1::MessagesController < ApplicationController
       id: message.id,
       content: message.content,
       created_at: message.created_at,
-      author: message.user.username
+      author: message.user.username,
+      channel: message.channel.name
     }
   end
 
