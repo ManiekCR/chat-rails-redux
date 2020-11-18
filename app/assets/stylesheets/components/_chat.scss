@@ -151,12 +151,13 @@ button {
 
   .logo-container {
     justify-content: flex-start;
-    padding: 0 20px;
+    padding: 0 0 60px 20px;
     height: 10%;
   }
 
   .channels-container {
     height: 15%;
+    z-index: 1;
   }
 
   .channels-container > div > ul > li {
@@ -170,7 +171,7 @@ button {
 
   .channel-container {
     height: 75%;
-    margin-top: -30px;
+    margin-top: 10px;
   }
 
   .channel-editor {
